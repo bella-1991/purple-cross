@@ -1,16 +1,28 @@
 <script setup>
-import EmployeeData from '@/assets/data/employees.json';
 import EmployeeRow from './EmployeeRow.vue';
 import Pagination from './Pagination.vue';
-import { ref, defineProps } from 'vue';
-
-const employeeData = ref(EmployeeData);
+import { ref, defineProps, onMounted } from 'vue';
+import axios from 'axios';
+import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
 
 defineProps({
     limit: Number,
     showPagination: {
         type: Boolean,
         default: true,
+    }
+})
+const employeeData = ref([]);
+let isLoading = true;
+
+onMounted(async () => {
+    try {
+        const response = await axios.get('/api/employees');
+        employeeData.value = response.data;
+    } catch (e) {
+        console.log('Error fetching data', e);
+    } finally {
+        isLoading = false;
     }
 })
 </script>
@@ -22,7 +34,10 @@ defineProps({
                 <h3 class="text-lg font-semibold text-slate-800">List of Employees</h3>
                 <p class="text-slate-500">Overview of the current employees.</p>
             </div>
-            <div class="my-3">
+            <div v-if="isLoading" class="text-center text-gray-500 py-6">
+                <PulseLoader />
+            </div>
+            <div v-else class="my-3">
                 <div class="w-full max-w-md min-w-[200px] relative">
                     <div class="relative">
                         <input

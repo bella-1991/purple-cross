@@ -19,7 +19,7 @@ const router = createRouter({
         },
         {
             path: '/employees/view/:id',
-            name: 'employee',
+            name: 'view-employee',
             component: EmployeeView,
         },
         {

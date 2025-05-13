@@ -1,231 +1,243 @@
-[
-  {
-    "id": 1,
-    "name": "Leanne Graham",
-    "username": "Bret",
-    "email": "Sincere@april.biz",
-    "address": {
-      "street": "Kulas Light",
-      "suite": "Apt. 556",
-      "city": "Gwenborough",
-      "zipcode": "92998-3874",
-      "geo": {
-        "lat": "-37.3159",
-        "lng": "81.1496"
-      }
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "address": {
+        "street": "Kulas Light",
+        "suite": "Apt. 556",
+        "city": "Gwenborough",
+        "zipcode": "92998-3874",
+        "geo": {
+          "lat": "-37.3159",
+          "lng": "81.1496"
+        }
+      },
+     "type": "full-time",
+      "department": "HR",
+      "occupation": "Recruitment Specialist",
+      "startDate": "01-02-2010",
+      "endDate": "30-04-2025",
+      "salary": "24000",
+      "phone": "1-770-736-8031 x56442"
     },
-    "department": "HR",
-    "occupation": "Recruitment Specialist",
-    "startDate": "01-02-2010",
-    "endDate": "30-04-2025",
-    "salary": "24000",
-    "phone": "1-770-736-8031 x56442"
-  },
-  {
-    "id": 2,
-    "name": "Ervin Howell",
-    "username": "Antonette",
-    "email": "Shanna@melissa.tv",
-    "address": {
-      "street": "Victor Plains",
-      "suite": "Suite 879",
-      "city": "Wisokyburgh",
-      "zipcode": "90566-7771",
-      "geo": {
-        "lat": "-43.9509",
-        "lng": "-34.4618"
-      }
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv",
+      "address": {
+        "street": "Victor Plains",
+        "suite": "Suite 879",
+        "city": "Wisokyburgh",
+        "zipcode": "90566-7771",
+        "geo": {
+          "lat": "-43.9509",
+          "lng": "-34.4618"
+        }
+      },
+     "type": "part-time",
+      "department": "Legal",
+      "occupation": "Legal Counsel",
+      "startDate": "05-20-2019",
+      "endDate": "",
+      "salary": "50000",
+      "phone": "010-692-6593 x09125",
+      "website": "anastasia.net"
     },
-    "department": "Legal",
-    "occupation": "Legal Counsel",
-    "startDate": "05-20-2019",
-    "endDate": "",
-    "salary": "50000",
-    "phone": "010-692-6593 x09125",
-    "website": "anastasia.net"
-  },
-  {
-    "id": 3,
-    "name": "Clementine Bauch",
-    "username": "Samantha",
-    "email": "Nathan@yesenia.net",
-    "address": {
-      "street": "Douglas Extension",
-      "suite": "Suite 847",
-      "city": "McKenziehaven",
-      "zipcode": "59590-4157",
-      "geo": {
-        "lat": "-68.6102",
-        "lng": "-47.0653"
-      }
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "Nathan@yesenia.net",
+      "address": {
+        "street": "Douglas Extension",
+        "suite": "Suite 847",
+        "city": "McKenziehaven",
+        "zipcode": "59590-4157",
+        "geo": {
+          "lat": "-68.6102",
+          "lng": "-47.0653"
+        }
+      },
+     "type": "part-time",
+      "department": "Office",
+      "occupation": "Office Admin",
+      "startDate": "10-07-2022",
+      "endDate": "30-06-2025",
+      "salary": "10000",
+      "phone": "1-463-123-4447",
+      "website": "ramiro.info"
     },
-    "department": "Office",
-    "occupation": "Office Admin",
-    "startDate": "10-07-2022",
-    "endDate": "30-06-2025",
-    "salary": "10000",
-    "phone": "1-463-123-4447",
-    "website": "ramiro.info"
-  },
-  {
-    "id": 4,
-    "name": "Patricia Lebsack",
-    "username": "Karianne",
-    "email": "Julianne.OConner@kory.org",
-    "address": {
-      "street": "Hoeger Mall",
-      "suite": "Apt. 692",
-      "city": "South Elvis",
-      "zipcode": "53919-4257",
-      "geo": {
-        "lat": "29.4572",
-        "lng": "-164.2990"
-      }
+    {
+      "id": 4,
+      "name": "Patricia Lebsack",
+      "username": "Karianne",
+      "email": "Julianne.OConner@kory.org",
+      "address": {
+        "street": "Hoeger Mall",
+        "suite": "Apt. 692",
+        "city": "South Elvis",
+        "zipcode": "53919-4257",
+        "geo": {
+          "lat": "29.4572",
+          "lng": "-164.2990"
+        }
+      },
+     "type": "contract",
+      "department": "Office",
+      "occupation": "Receptionist",
+      "startDate": "20-12-2017",
+      "endDate": "30-04-2025",
+      "salary": "15000",
+      "phone": "493-170-9623 x156",
+      "website": "kale.biz"
     },
-    "department": "Office",
-    "occupation": "Receptionist",
-    "startDate": "20-12-2017",
-    "endDate": "30-04-2025",
-    "salary": "15000",
-    "phone": "493-170-9623 x156",
-    "website": "kale.biz"
-  },
-  {
-    "id": 5,
-    "name": "Chelsey Dietrich",
-    "username": "Kamren",
-    "email": "Lucio_Hettinger@annie.ca",
-    "address": {
-      "street": "Skiles Walks",
-      "suite": "Suite 351",
-      "city": "Roscoeview",
-      "zipcode": "33263",
-      "geo": {
-        "lat": "-31.8129",
-        "lng": "62.5342"
-      }
+    {
+      "id": 5,
+      "name": "Chelsey Dietrich",
+      "username": "Kamren",
+      "email": "Lucio_Hettinger@annie.ca",
+      "address": {
+        "street": "Skiles Walks",
+        "suite": "Suite 351",
+        "city": "Roscoeview",
+        "zipcode": "33263",
+        "geo": {
+          "lat": "-31.8129",
+          "lng": "62.5342"
+        }
+      },
+     "type": "full-time",
+      "department": "IT",
+      "occupation": "Frontend Developer",
+      "startDate": "05-11-2021",
+      "endDate": "",
+      "salary": "30000",
+      "phone": "(254)954-1289",
+      "website": "demarco.info"
     },
-    "department": "IT",
-    "occupation": "Frontend Developer",
-    "startDate": "05-11-2021",
-    "endDate": "",
-    "salary": "30000",
-    "phone": "(254)954-1289",
-    "website": "demarco.info"
-  },
-  {
-    "id": 6,
-    "name": "Mrs. Dennis Schulist",
-    "username": "Leopoldo_Corkery",
-    "email": "Karley_Dach@jasper.info",
-    "address": {
-      "street": "Norberto Crossing",
-      "suite": "Apt. 950",
-      "city": "South Christy",
-      "zipcode": "23505-1337",
-      "geo": {
-        "lat": "-71.4197",
-        "lng": "71.7478"
-      }
+    {
+      "id": 6,
+      "name": "Mrs. Dennis Schulist",
+      "username": "Leopoldo_Corkery",
+      "email": "Karley_Dach@jasper.info",
+      "address": {
+        "street": "Norberto Crossing",
+        "suite": "Apt. 950",
+        "city": "South Christy",
+        "zipcode": "23505-1337",
+        "geo": {
+          "lat": "-71.4197",
+          "lng": "71.7478"
+        }
+      },
+     "type": "full-time",
+      "department": "IT",
+      "occupation": "Backend Developer",
+      "startDate": "14-02-2022",
+      "endDate": "",
+      "salary": "35000",
+      "phone": "1-477-935-8478 x6430",
+      "website": "ola.org"
     },
-    "department": "IT",
-    "occupation": "Backend Developer",
-    "startDate": "14-02-2022",
-    "endDate": "",
-    "salary": "35000",
-    "phone": "1-477-935-8478 x6430",
-    "website": "ola.org"
-  },
-  {
-    "id": 7,
-    "name": "Kurtis Weissnat",
-    "username": "Elwyn.Skiles",
-    "email": "Telly.Hoeger@billy.biz",
-    "address": {
-      "street": "Rex Trail",
-      "suite": "Suite 280",
-      "city": "Howemouth",
-      "zipcode": "58804-1099",
-      "geo": {
-        "lat": "24.8918",
-        "lng": "21.8984"
-      }
+    {
+      "id": 7,
+      "name": "Kurtis Weissnat",
+      "username": "Elwyn.Skiles",
+      "email": "Telly.Hoeger@billy.biz",
+      "address": {
+        "street": "Rex Trail",
+        "suite": "Suite 280",
+        "city": "Howemouth",
+        "zipcode": "58804-1099",
+        "geo": {
+          "lat": "24.8918",
+          "lng": "21.8984"
+        }
+      },
+     "type": "full-time",
+      "department": "IT",
+      "occupation": "QA Engineer",
+      "startDate": "01-02-2020",
+      "endDate": "30-05-2025",
+      "salary": "25000",
+      "phone": "210.067.6132",
+      "website": "elvis.io"
     },
-    "department": "IT",
-    "occupation": "QA Engineer",
-    "startDate": "01-02-2020",
-    "endDate": "30-05-2025",
-    "salary": "25000",
-    "phone": "210.067.6132",
-    "website": "elvis.io"
-  },
-  {
-    "id": 8,
-    "name": "Nicholas Runolfsdottir V",
-    "username": "Maxime_Nienow",
-    "email": "Sherwood@rosamond.me",
-    "address": {
-      "street": "Ellsworth Summit",
-      "suite": "Suite 729",
-      "city": "Aliyaview",
-      "zipcode": "45169",
-      "geo": {
-        "lat": "-14.3990",
-        "lng": "-120.7677"
-      }
+    {
+      "id": 8,
+      "name": "Nicholas Runolfsdottir V",
+      "username": "Maxime_Nienow",
+      "email": "Sherwood@rosamond.me",
+      "address": {
+        "street": "Ellsworth Summit",
+        "suite": "Suite 729",
+        "city": "Aliyaview",
+        "zipcode": "45169",
+        "geo": {
+          "lat": "-14.3990",
+          "lng": "-120.7677"
+        }
+      },
+     "type": "full-time",
+      "department": "IT",
+      "occupation": "Product Manager",
+      "startDate": "17-09-2023",
+      "endDate": "",
+      "salary": "28000",
+      "phone": "586.493.6943 x140",
+      "website": "jacynthe.com"
     },
-    "department": "IT",
-    "occupation": "Product Manager",
-    "startDate": "17-09-2023",
-    "endDate": "",
-    "salary": "28000",
-    "phone": "586.493.6943 x140",
-    "website": "jacynthe.com"
-  },
-  {
-    "id": 9,
-    "name": "Glenna Reichert",
-    "username": "Delphine",
-    "email": "Chaim_McDermott@dana.io",
-    "address": {
-      "street": "Dayna Park",
-      "suite": "Suite 449",
-      "city": "Bartholomebury",
-      "zipcode": "76495-3109",
-      "geo": {
-        "lat": "24.6463",
-        "lng": "-168.8889"
-      }
+    {
+      "id": 9,
+      "name": "Glenna Reichert",
+      "username": "Delphine",
+      "email": "Chaim_McDermott@dana.io",
+      "address": {
+        "street": "Dayna Park",
+        "suite": "Suite 449",
+        "city": "Bartholomebury",
+        "zipcode": "76495-3109",
+        "geo": {
+          "lat": "24.6463",
+          "lng": "-168.8889"
+        }
+      },
+     "type": "full-time",
+      "department": "IT",
+      "occupation": "SEO Executive",
+      "startDate": "01-02-2019",
+      "endDate": "30-04-2024",
+      "salary": "23000",
+      "phone": "(775)976-6794 x41206",
+      "website": "conrad.com"
     },
-    "department": "IT",
-    "occupation": "SEO Executive",
-    "startDate": "01-02-2019",
-    "endDate": "30-04-2024",
-    "salary": "23000",
-    "phone": "(775)976-6794 x41206",
-    "website": "conrad.com"
-  },
-  {
-    "id": 10,
-    "name": "Clementina DuBuque",
-    "username": "Moriah.Stanton",
-    "email": "Rey.Padberg@karina.biz",
-    "address": {
-      "street": "Kattie Turnpike",
-      "suite": "Suite 198",
-      "city": "Lebsackbury",
-      "zipcode": "31428-2261",
-      "geo": {
-        "lat": "-38.2386",
-        "lng": "57.2232"
-      }
-    },
-    "department": "IT",
-    "occupation": "Engineering Manager",
-    "startDate": "05-06-2025",
-    "endDate": "",
-    "salary": "45000",
-    "phone": "024-648-3804",
-    "website": "ambrose.net"
-  }
-]
+    {
+      "id": 10,
+      "name": "Clementina DuBuque",
+      "username": "Moriah.Stanton",
+      "email": "Rey.Padberg@karina.biz",
+      "address": {
+        "street": "Kattie Turnpike",
+        "suite": "Suite 198",
+        "city": "Lebsackbury",
+        "zipcode": "31428-2261",
+        "geo": {
+          "lat": "-38.2386",
+          "lng": "57.2232"
+        }
+      },
+     "type": "full-time",
+      "department": "IT",
+      "occupation": "Engineering Manager",
+      "startDate": "05-06-2025",
+      "endDate": "",
+      "salary": "45000",
+      "phone": "024-648-3804",
+      "website": "ambrose.net"
+    }
+  ]  
+}
