@@ -51,18 +51,18 @@ function getDateStatus(startDate, endDate, start = true) {
         </td>
         <td class="p-4 py-5 flex gap-2 justify-between">
             <a :href="'/viewEmployee/' + employee.id"
-                class="flex justify-center items-center relative h-10 max-h-[40px] w-15 max-w-[60px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-green-900 border-2 transition-all hover:bg-green-100 active:bg-green-300 cursor-pointer disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                View
+                class="flex justify-center items-center relative h-10 max-h-[40px] w-15 max-w-[60px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-green-500 border-2 transition-all hover:bg-green-100 active:bg-green-300 cursor-pointer disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                <i class="pi pi-eye" style="font-size: 1rem"></i>
             </a>
             <a :href="'/editEmployee/' + employee.id"
-                class="flex justify-center items-center relative h-10 max-h-[40px] w-15 max-w-[60px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-blue-900 border-2 transition-all hover:bg-blue-100 active:bg-blue-300 cursor-pointer disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                Edit
+                class="flex justify-center items-center relative h-10 max-h-[40px] w-15 max-w-[60px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-blue-500 border-2 transition-all hover:bg-blue-100 active:bg-blue-300 cursor-pointer disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                <i class="pi pi-file-edit" style="font-size: 1rem"></i>
             </a>
             <button
-                class="flex justify-center items-center relative h-10 max-h-[40px] w-15 max-w-[60px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-red-900 border-2 transition-all hover:bg-red-100 active:bg-red-300 cursor-pointer disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                class="flex justify-center items-center relative h-10 max-h-[40px] w-15 max-w-[60px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-red-500 border-2 transition-all hover:bg-red-100 active:bg-red-300 cursor-pointer disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 type="button"
                 @click="isModalOpen = true">
-                Delete
+                <i class="pi pi-trash" style="font-size: 1rem"></i>    
             </button>
             <DeleteEmployee :visible="isModalOpen" @close="isModalOpen = false" />
         </td>
