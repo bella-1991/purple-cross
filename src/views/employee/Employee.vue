@@ -1,22 +1,37 @@
 <script setup>
-import { RouterLink, useRoute } from 'vue-router';
+import { RouterLink, useRoute, useRouter } from 'vue-router';
 import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
-import { reactive, onMounted, computed } from 'vue';
+import { reactive, onMounted } from 'vue';
 import axios from 'axios';
-import BackButton from '../../components/BackButton.vue';
+import BackButton from '@/components/BackButton.vue';
+import { getDateStatus, formatDate } from '@/helpers/date-time';
+import { useToast } from 'vue-toastification';
+import { getEmpStatusBadgeClass, getTypeBadgeClass } from '../../helpers/badges';
 
 const route = useRoute();
 const empId = route.params.id;
+const router = useRouter();
+const toast = useToast();
 const state = reactive({
     employee: {},
     isLoading: true,
 });
 
+const deleteEmployee = async () => {
+    try {
+        await axios.delete(`/api/employees/${empId}`);
+        toast.success('Employee deleted successfully');
+        router.push('/employees');
+    } catch (e) {
+        console.log('something went wrong' + e);
+        toast.error('something went wrong');
+    }
+}
+
 onMounted(async () => {
     try {
         const response = await axios.get(`/api/employees/${empId}`);
         state.employee = response.data;
-        console.log(response.data)
     } catch (e) {
         console.log('Error fetching data', e);
     } finally {
@@ -24,27 +39,12 @@ onMounted(async () => {
     }
 });
 
-const getBadgeClass = (type) => {
-    switch (type.toLowerCase()) {
-        case 'full-time':
-            return 'bg-green-600 text-white';
-        case 'part-time':
-            return 'bg-blue-500 text-white';
-        case 'contract':
-            return 'bg-yellow-500 text-white';
-        default:
-            return 'bg-gray-400';
-    }
-}
-
 const formatSalary = salary => {
-    console.log(salary)
     return (parseInt(salary)).toLocaleString({
         style: 'currency',
         currency: 'USD',
     })
 }
-
 </script>
 
 <template>
@@ -54,7 +54,7 @@ const formatSalary = salary => {
             <div class="flex flex-col lg:flex-row w-full gap-6">
                 <div class="flex-1">
                     <div class="bg-white p-6 rounded-lg shadow-md text-center md:text-left relative">
-                        <span :class="getBadgeClass(state.employee.type)"
+                        <span :class="getTypeBadgeClass(state.employee.type)"
                             class="text-gray-500 p-1 px-2 mb-4 rounded-sm">{{ state.employee.type }}</span>
                         <h1 class="text-3xl font-bold mb-4 mt-2">{{ state.employee.name }}</h1>
                         <p class="mb-4">{{ state.employee.occupation }}</p>
@@ -72,10 +72,18 @@ const formatSalary = salary => {
                         <p class="mb-4">{{ state.employee.occupation }}</p>
 
                         <h3 class="text-slate-800 text-base font-bold mb-2">Start Date</h3>
-                        <p class="mb-4">{{ state.employee.startDate }}</p>
+                        <p class="mb-4">{{ formatDate(state.employee.startDate, 'DD.MM.YYYY', '-', 'en-GB') }} - 
+                            <span 
+                                class="text-gray-500 p-1 px-2 mb-4 rounded-sm" 
+                                :class="getEmpStatusBadgeClass(getDateStatus(state.employee.startDate, state.employee.endDate))">
+                                {{ getDateStatus(state.employee.startDate, state.employee.endDate) }}
+                            </span>
+                        </p>
 
                         <h3 class="text-slate-800 text-base font-bold mb-2">End Date</h3>
-                        <p class="mb-4">{{ state.employee.endDate }}</p>
+                        <p class="mb-4">{{ formatDate(state.employee.endDate, 'DD.MM.YYYY', '-', 'en-GB') }} - 
+                            <span class="text-gray-500 p-1 px-2 mb-4 rounded-sm" :class="getEmpStatusBadgeClass(getDateStatus(state.employee.startDate, state.employee.endDate, false))">{{ getDateStatus(state.employee.startDate, state.employee.endDate, false) }}</span>
+                        </p>
 
                         <h3 class="text-slate-800 text-base font-bold mb-2">Salary</h3>
                         <p class="mb-4">${{ formatSalary(state.employee.salary) }} / year</p>
@@ -134,7 +142,8 @@ const formatSalary = salary => {
                             Edit Employee
                         </RouterLink>
                         <button
-                            class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
+                            @click="deleteEmployee"
+                            class="cursor-pointer bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
                             Delete Employee
                         </button>
                     </div>
