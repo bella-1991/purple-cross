@@ -1,7 +1,7 @@
 <script setup>
 import EmployeeRow from './EmployeeRow.vue';
 import Pagination from './Pagination.vue';
-import { ref, defineProps, onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import { getSortedEmployees } from '../helpers/employees';
 import axios from 'axios';
 import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
@@ -46,7 +46,7 @@ const handlePageClick = pageNum => {
 
 const handleInput = (event) => {
     searchStr.value = event.target.value;
-    const results = getSortedEmployees(allEmployees.value, 1, { rpp: rpp.value, search: searchStr.value, occupation: occupation.value, department: department.value  });
+    const results = getSortedEmployees(allEmployees.value, 1, { rpp: rpp.value, search: searchStr.value, occupation: occupation.value, department: department.value });
 
     allEmployees.value = results.allEmployees;
     sortedEmployees.value = results.sortedEmployees;
@@ -73,12 +73,12 @@ const sortTable = column => {
 }
 
 const handleSelect = (type) => {
-    if(type === 'dept') {
+    if (type === 'dept') {
         occupation.value = '';
     }
 
-    const results = getSortedEmployees(allEmployees.value, 1, { 
-        rpp: rpp.value, search: searchStr.value, occupation: occupation.value, department: department.value 
+    const results = getSortedEmployees(allEmployees.value, 1, {
+        rpp: rpp.value, search: searchStr.value, occupation: occupation.value, department: department.value
     });
 
     allEmployees.value = results.allEmployees;
@@ -89,6 +89,21 @@ const handleSelect = (type) => {
     const lastVal = page.value * rpp.value;
     indexOfLast.value = lastVal > results.numberOfResults ? results.numberOfResults : lastVal;
     indexOfFirst.value = page.value === 1 ? 1 : page.value === pages.value ? indexOfLast.value - (results.numberOfResults % rpp.value) : indexOfLast.value - rpp.value;
+}
+
+function exportToCSV() {
+  const headers = Object.keys(allEmployees.value[0]).join(',')
+  const rows = allEmployees.value.map(obj => Object.values(obj).join(','))
+  const csvContent = [headers, ...rows].join('\n')
+
+  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
+  const url = URL.createObjectURL(blob)
+
+  const link = document.createElement('a')
+  link.setAttribute('href', url)
+  link.setAttribute('download', 'employees.csv')
+  link.click()
+  URL.revokeObjectURL(url)
 }
 
 onMounted(async () => {
@@ -206,10 +221,15 @@ onMounted(async () => {
                                 Termination Date
                             </p>
                         </th>
-                        <th class="p-4 border-b border-slate-200 bg-slate-50">
+                        <th class="p-4 border-b border-slate-200 bg-slate-50 flex justify-between items-center">
                             <p class="text-sm font-normal leading-none text-slate-500">
                                 Actions
                             </p>
+                            <button
+                                class="flex justify-center items-center relative h-10 max-h-[40px] w-15 max-w-[60px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase indigo-red-500 border-2 transition-all hover:bg-indigo-100 active:bg-indigo-300 cursor-pointer disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                type="button" @click="exportToCSV">
+                                <i class="pi pi-download" style="font-size: 1rem"></i>
+                            </button>
                         </th>
                     </tr>
                 </thead>
