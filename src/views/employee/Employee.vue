@@ -57,6 +57,7 @@ const formatSalary = salary => {
                         <span :class="getTypeBadgeClass(state.employee.type)"
                             class="text-gray-500 p-1 px-2 mb-4 rounded-sm">{{ state.employee.type }}</span>
                         <h1 class="text-3xl font-bold mb-4 mt-2">{{ state.employee.name }}</h1>
+                        <p class="mb-4">Code: {{ state.employee.code }}</p>
                         <p class="mb-4">{{ state.employee.occupation }}</p>
                         <label class="text-slate-500">{{ state.employee.department }}</label>
                     </div>

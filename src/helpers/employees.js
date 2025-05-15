@@ -34,15 +34,14 @@ export const getSortedEmployees = (response, page, filters) => {
   // sorted according to order
   if (sort) {
     switch (sort) {
-      case "id":
+      case "name":
         if (asc) {
-          sortedResults = sortedResults.toSorted((a, b) =>
-            parseInt(a.id) > parseInt(b.id) ? 1 : -1
+          sortedResults = sortedResults.sort((a, b) =>
+            a.name.localeCompare(b.name)
           );
         } else {
           sortedResults = sortedResults
-            .toSorted((a, b) => (parseInt(a.id) > parseInt(b.id) ? 1 : -1))
-            .toReversed();
+            .sort((a, b) => b.name.localeCompare(a.name));
         }
         break;
       default:

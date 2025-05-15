@@ -13,6 +13,7 @@ const empId = route.params.id;
 const form = reactive({
   type: 'Full-Time',
   name: '',
+  code: '',
   occupation: '',
   department: '',
   salary: '',
@@ -37,6 +38,7 @@ const handleSubmit = async () => {
   const formObj = {
     type: form.type,
     name: form.name,
+    code: form.name,
     occupation: form.occupation,
     department: form.department,
     salary: form.salary,
@@ -71,6 +73,7 @@ onMounted(async () => {
         const response = await axios.get(`/api/employees/${empId}`);
         state.employee = response.data;
         form.type = state.employee.type;
+        form.code = state.employee.code;
         form.name = state.employee.name;
         form.occupation = state.employee.occupation;
         form.department = state.employee.department;
@@ -110,6 +113,14 @@ onMounted(async () => {
               <option value="Remote">Remote</option>
               <option value="Internship">Internship</option>
             </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2">Code
+              <span class="text-red-600">*</span>
+            </label>
+            <input v-model="form.code" type="text" id="code" name="code" class="border rounded w-full py-2 px-3 mb-2"
+              placeholder="John Doe" required />
           </div>
 
           <div class="mb-4">

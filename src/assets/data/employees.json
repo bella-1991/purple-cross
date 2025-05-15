@@ -1,6 +1,7 @@
 {
   "employees": [
     {
+      "code": "A030",
       "type": "Full-Time",
       "name": "Leanne Graham",
       "occupation": "Recruitment Specialist",
@@ -33,6 +34,7 @@
           "lng": "-34.4618"
         }
       },
+      "code": "A002",
       "type": "Part-Time",
       "department": "Legal",
       "occupation": "Legal Counsel",
@@ -57,6 +59,7 @@
           "lng": "-47.0653"
         }
       },
+      "code": "A001",
       "type": "Part-Time",
       "department": "Office",
       "occupation": "Office Admin",
@@ -81,6 +84,7 @@
           "lng": "-164.2990"
         }
       },
+      "code": "A004",
       "type": "Contract",
       "department": "Office",
       "occupation": "Receptionist",
@@ -105,6 +109,7 @@
           "lng": "62.5342"
         }
       },
+      "code": "A003",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "Frontend Developer",
@@ -129,6 +134,7 @@
           "lng": "71.7478"
         }
       },
+      "code": "A005",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "Backend Developer",
@@ -153,6 +159,7 @@
           "lng": "21.8984"
         }
       },
+      "code": "A006",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "QA Engineer",
@@ -177,6 +184,7 @@
           "lng": "-120.7677"
         }
       },
+      "code": "A007",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "Product Manager",
@@ -201,6 +209,7 @@
           "lng": "-168.8889"
         }
       },
+      "code": "A008",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "SEO Executive",
@@ -225,6 +234,7 @@
           "lng": "57.2232"
         }
       },
+      "code": "A009",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "Engineering Manager",
@@ -235,6 +245,7 @@
       "website": "ambrose.net"
     },
     {
+      "code": "A010",
       "type": "Full-Time",
       "name": "Leanne Josh",
       "occupation": "Recruitment Specialist",
@@ -267,6 +278,7 @@
           "lng": "-34.4618"
         }
       },
+      "code": "A011",
       "type": "Part-Time",
       "department": "Legal",
       "occupation": "Legal Counsel",
@@ -291,6 +303,7 @@
           "lng": "-47.0653"
         }
       },
+      "code": "A012",
       "type": "Part-Time",
       "department": "Office",
       "occupation": "Office Admin",
@@ -315,6 +328,7 @@
           "lng": "-164.2990"
         }
       },
+      "code": "A013",
       "type": "Contract",
       "department": "Office",
       "occupation": "Receptionist",
@@ -339,6 +353,7 @@
           "lng": "62.5342"
         }
       },
+      "code": "A014",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "Frontend Developer",
@@ -363,6 +378,7 @@
           "lng": "71.7478"
         }
       },
+      "code": "A015",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "Backend Developer",
@@ -387,6 +403,7 @@
           "lng": "21.8984"
         }
       },
+      "code": "A016",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "QA Engineer",
@@ -411,6 +428,7 @@
           "lng": "-120.7677"
         }
       },
+      "code": "A017",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "Product Manager",
@@ -435,6 +453,7 @@
           "lng": "-168.8889"
         }
       },
+      "code": "A018",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "SEO Executive",
@@ -459,6 +478,7 @@
           "lng": "57.2232"
         }
       },
+      "code": "A019",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "Engineering Manager",
@@ -469,6 +489,7 @@
       "website": "ambrose.net"
     },
     {
+      "code": "A020",
       "type": "Full-Time",
       "name": "Josh Graham",
       "occupation": "Recruitment Specialist",
@@ -501,6 +522,7 @@
           "lng": "-34.4618"
         }
       },
+      "code": "A021",
       "type": "Part-Time",
       "department": "Legal",
       "occupation": "Legal Counsel",
@@ -525,6 +547,7 @@
           "lng": "-47.0653"
         }
       },
+      "code": "A022",
       "type": "Part-Time",
       "department": "Office",
       "occupation": "Office Admin",
@@ -549,6 +572,7 @@
           "lng": "-164.2990"
         }
       },
+      "code": "A023",
       "type": "Contract",
       "department": "Office",
       "occupation": "Receptionist",
@@ -573,6 +597,7 @@
           "lng": "62.5342"
         }
       },
+      "code": "A024",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "Frontend Developer",
@@ -597,6 +622,7 @@
           "lng": "71.7478"
         }
       },
+      "code": "A025",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "Backend Developer",
@@ -621,6 +647,7 @@
           "lng": "21.8984"
         }
       },
+      "code": "A026",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "QA Engineer",
@@ -645,6 +672,7 @@
           "lng": "-120.7677"
         }
       },
+      "code": "A027",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "Product Manager",
@@ -669,6 +697,7 @@
           "lng": "-168.8889"
         }
       },
+      "code": "A028",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "SEO Executive",
@@ -693,6 +722,7 @@
           "lng": "57.2232"
         }
       },
+      "code": "A029",
       "type": "Full-Time",
       "department": "IT",
       "occupation": "Engineering Manager",

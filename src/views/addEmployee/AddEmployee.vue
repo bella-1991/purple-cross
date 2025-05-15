@@ -2,10 +2,12 @@
 import { reactive } from 'vue';
 import axios from 'axios';
 import router from '@/router';
+import { RouterLink } from 'vue-router';
 import { useToast } from 'vue-toastification';
 
 const form = reactive({
   type: 'Full-Time',
+  code: '',
   name: '',
   occupation: '',
   department: '',
@@ -25,6 +27,7 @@ const form = reactive({
 const handleSubmit = async () => {
   const formObj = {
     type: form.type,
+    code: form.code,
     name: form.name,
     occupation: form.occupation,
     department: form.department,
@@ -66,6 +69,14 @@ const handleSubmit = async () => {
         <form @submit.prevent="handleSubmit">
           <h2 class="text-3xl text-center font-semibold mb-6">Add Employee</h2>
 
+
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2">Code
+              <span class="text-red-600">*</span>
+            </label>
+            <input v-model="form.code" type="text" id="code" name="code" class="border rounded w-full py-2 px-3 mb-2"
+              placeholder="A000000" required />
+          </div>
           <div class="mb-4">
             <label for="type" class="block text-gray-700 font-bold mb-2">Job Type
               <span class="text-red-600">*</span>
@@ -153,7 +164,12 @@ const handleSubmit = async () => {
               placeholder="Phone" />
           </div>
 
-          <div>
+          <div class="flex gap-2">
+            <RouterLink to='/'
+              class="text-center bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
+              type="button">
+              Cancel
+            </RouterLink>
             <button
               class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
               type="submit">

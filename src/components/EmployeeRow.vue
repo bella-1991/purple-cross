@@ -34,7 +34,7 @@ const handleDelete = async () => {
 <template>
     <tr class="hover:bg-slate-50 border-b border-slate-200">
         <td class="p-4 py-5">
-            <p class="block font-semibold text-sm text-slate-800">{{ employee.id }}</p>
+            <p class="block font-semibold text-sm text-slate-800">{{ employee.code }}</p>
         </td>
         <td class="p-4 py-5">
             <p class="text-sm text-slate-500">{{ employee.name }}</p>
